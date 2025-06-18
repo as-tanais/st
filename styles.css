@@ -1,0 +1,97 @@
+/* Базовые стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #181818;
+}
+
+/* Стили для бокового меню */
+.sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: white;
+    transition: width 0.3s ease;
+    flex-shrink: 0;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #34495e;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .sidebar-header h2 {
+    display: none;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar.collapsed li a span {
+    display: none;
+}
+
+.sidebar-nav li a:hover {
+    background: #34495e;
+}
+
+.sidebar-nav li a i {
+    margin-right: 10px;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Стили для основной области и навигации */
+.content-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-nav {
+    background: #3a638d;
+    padding: 15px;
+    border-bottom: 1px solid #8e2168;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin-right: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.main-nav li:hover {
+    background: #e9ecef;
+    border-radius: 4px;
+}
